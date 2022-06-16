@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+  }
+
+body{
+    padding: 0;
+    /* padding-top: 40px; */
+    margin: 0;
+    background-image: url('images/bg-intro-desktop.png');
+    background-color: hsl(0, 100%, 74%);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+
+}
+
+@media (max-width: 500px) {
+    body {
+        background-image: url('images/bg-intro-mobile.png');
+    }
+}
+
+main{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+article{
+    margin-right: 70px;
+}
+article h1{
+    color:white;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 50px;
+
+
+}
+
+.talk{
+    color: whitesmoke;
+    font-weight: 400;
+    width: 500px;
+
+}
+
+aside{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.thereafter{
+    background-color: hsl(248, 32%, 49%) ;
+    color: whitesmoke;
+    text-align: center;
+    font-size: small;
+    font-weight: 400;
+    padding: 15px ;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    width: 100%;
+    box-shadow: 0 7px 0 0 rgba(0,0,0,0.2);
+    }
+.thereafter span{
+    font-weight: 600;
+    color: white;
+}
+.reg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 500px;
+    background-color: white;
+    padding: 40px;
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 7px 0 0 rgba(0,0,0,0.2);
+
+}
+
+.form-field{
+    margin-top: 20px;
+}
+
+.reg .edit{
+    width: 100%;
+    height: 50px;
+    font-family: 'Poppins', sans-serif;
+    border: 0.5px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    font-weight: 500;
+    outline: none;
+    padding-left: 30px;
+
+}
+
+.edit:focus:valid{
+    border: 1px solid hsl(249, 10%, 26%);
+}
+
+.edit:required:focus:invalid{
+    outline: none;
+    border: none;
+    border: 2px solid hsl(0, 100%, 74%);
+    color: hsl(0, 100%, 74%);
+    background-image: url('images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-origin: content-box;
+    padding-right: 20px;
+}
+
+.edit:required:focus:invalid~.error{
+    display: inline;
+    
+}
+
+
+.error {
+    display: none;
+    font-size: 13px;
+    float: right;
+    color: hsl(0, 100%, 74%);
+    font-weight: 500;
+    padding: 5px 0 20px;
+}
+
+
+
+.claim{
+
+    background-color: hsl(154, 59%, 51%);
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 13px;
+    width: 100%;
+    box-shadow: 0 4px 0px 0 hsl(154, 46%, 48%);
+    transition: .3s;
+    outline: none;
+    border: none;
+}
+.claim:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+.terms{
+    color: hsl(246, 25%, 77%);
+    font-weight: 600;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 10px;
+
+}
+
+.t-c{
+    color: hsl(0, 100%, 74%) ;
+    font-weight: 700;
+}
+
+@media  screen and (min-width:501px) and (max-width: 1070px) {
+    article h1{
+        text-align: center;
+        font-size: 35px;
+        line-height: 40px;
+        margin-left: 60px;
+
+    }
+    .talk{
+        text-align: center;
+        margin-left: 60px;
+
+    }
+}
+
+@media (max-width:500px) {
+    article{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 70px;
+    }
+    article h1{
+        text-align: center;
+        font-size: 25px;
+        line-height: 30px;
+        margin-left: 60px;
+
+    }
+    .talk{
+        text-align: center;
+        padding-left: 80px;
+        padding-right: 100px;
+        margin-left: 70px;
+        margin-bottom: 40px;
+
+
+    }
+    article p{
+        text-align: center;
+        /* width: 350px;
+        margin-left: 60px; */
+        color: whitesmoke;
+        padding-bottom: 40px;
+    }
+    
+    .thereafter{
+        width: 90%;
+        padding-right: 90px;
+        padding-left: 90px;
+    }
+    aside{
+    }
+    .reg{
+        width: 90%;
+        margin-bottom: 100px;
+
+    }
+
+    .terms{
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+}
