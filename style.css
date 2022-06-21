@@ -2,9 +2,13 @@
 
 * {
     box-sizing: border-box;
-  }
+}
 
-body{
+html {
+    height: 100%;
+}
+
+body {
     padding: 0;
     /* padding-top: 40px; */
     margin: 0;
@@ -13,29 +17,32 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
 
-
 }
 
 @media (max-width: 500px) {
     body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
         background-image: url('images/bg-intro-mobile.png');
     }
 }
 
-main{
-    
+main {
+
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-article{
+article {
     margin-right: 70px;
 }
-article h1{
-    color:white;
+
+article h1 {
+    color: white;
     font-weight: 700;
     font-size: 45px;
     line-height: 50px;
@@ -43,37 +50,39 @@ article h1{
 
 }
 
-.talk{
+.talk {
     color: whitesmoke;
     font-weight: 400;
     width: 500px;
 
 }
 
-aside{ 
+.form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.thereafter{
-    background-color: hsl(248, 32%, 49%) ;
+.thereafter {
+    background-color: hsl(248, 32%, 49%);
     color: whitesmoke;
     text-align: center;
     font-size: small;
     font-weight: 400;
-    padding: 15px ;
+    padding: 15px;
     border-radius: 10px;
     margin-bottom: 25px;
     width: 100%;
-    box-shadow: 0 7px 0 0 rgba(0,0,0,0.2);
-    }
-.thereafter span{
+    box-shadow: 0 7px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.thereafter span {
     font-weight: 600;
     color: white;
 }
-.reg{
+
+.reg {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,15 +91,15 @@ aside{
     padding: 40px;
     padding-top: 20px;
     border-radius: 10px;
-    box-shadow: 0 7px 0 0 rgba(0,0,0,0.2);
+    box-shadow: 0 7px 0 0 rgba(0, 0, 0, 0.2);
 
 }
 
-.form-field{
+.form-field {
     margin-top: 20px;
 }
 
-.reg .edit{
+.reg .edit {
     width: 100%;
     height: 50px;
     font-family: 'Poppins', sans-serif;
@@ -102,11 +111,11 @@ aside{
 
 }
 
-.edit:focus:valid{
+.edit:focus:valid {
     border: 1px solid hsl(249, 10%, 26%);
 }
 
-.edit:required:focus:invalid{
+.edit:required:focus:invalid {
     outline: none;
     border: none;
     border: 2px solid hsl(0, 100%, 74%);
@@ -118,9 +127,9 @@ aside{
     padding-right: 20px;
 }
 
-.edit:required:focus:invalid~.error{
+.edit:required:focus:invalid~.error {
     display: inline;
-    
+
 }
 
 
@@ -135,7 +144,7 @@ aside{
 
 
 
-.claim{
+.claim {
 
     background-color: hsl(154, 59%, 51%);
     text-align: center;
@@ -151,11 +160,13 @@ aside{
     outline: none;
     border: none;
 }
-.claim:hover{
+
+.claim:hover {
     cursor: pointer;
     opacity: 0.7;
 }
-.terms{
+
+.terms {
     color: hsl(246, 25%, 77%);
     font-weight: 600;
     text-align: center;
@@ -166,42 +177,40 @@ aside{
 
 }
 
-.t-c{
-    color: hsl(0, 100%, 74%) ;
+.t-c {
+    color: hsl(0, 100%, 74%);
     font-weight: 700;
 }
 
-@media  screen and (min-width:501px) and (max-width: 1070px) {
-    article h1{
-        text-align: center;
-        font-size: 35px;
-        line-height: 40px;
-        margin-left: 60px;
 
+@media (max-width: 500px) {
+
+    main{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        /* padding-left: 100px; */
     }
-    .talk{
-        text-align: center;
-        margin-left: 60px;
-
-    }
-}
-
-@media (max-width:500px) {
-    article{
+    article {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         padding-top: 70px;
+        margin-left: 70px;
     }
-    article h1{
+
+    article h1 {
         text-align: center;
         font-size: 25px;
         line-height: 30px;
         margin-left: 60px;
 
     }
-    .talk{
+
+    .talk {
         text-align: center;
         padding-left: 80px;
         padding-right: 100px;
@@ -210,30 +219,49 @@ aside{
 
 
     }
-    article p{
+
+    article p {
         text-align: center;
         /* width: 350px;
         margin-left: 60px; */
         color: whitesmoke;
         padding-bottom: 40px;
     }
-    
-    .thereafter{
+.form{
+    margin-left: 70px;
+    width: 375px;
+    padding-bottom: 100px;
+
+}
+    .thereafter {
         width: 90%;
         padding-right: 90px;
         padding-left: 90px;
     }
-    aside{
-    }
-    .reg{
+    .reg {
         width: 90%;
-        margin-bottom: 100px;
+        /* margin-bottom: 100px; */
 
     }
+    .claim {
 
-    .terms{
-        padding-left: 15px;
-        padding-right: 15px;
+        background-color: hsl(154, 59%, 51%);
+        text-align: center;
+        color: white;
+        font-weight: 500;
+        font-family: 'Poppins', sans-serif;
+        margin-top: 20px;
+        border-radius: 5px;
+        padding: 13px;
+        width: 100%;
+        box-shadow: 0 4px 0px 0 hsl(154, 46%, 48%);
+        transition: .3s;
+        outline: none;
+        border: none;
     }
     
+    .claim:hover {
+        cursor: pointer;
+        opacity: 0.7;
+    }
 }
