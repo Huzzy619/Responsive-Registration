@@ -173,7 +173,7 @@ main {
 .claim input{
     border: none;
     outline: none;
-    background-color: hsl(154, 59%, 51%);
+    background-color: hsl(154, 59%, 51%); 
     color: white;
     font-weight: 500;
     font-family: 'Poppins', sans-serif;
